@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> 
+    <title>Our Horror Movie Website</title>
+    <link rel="stylesheet" href="style.css">
+
+ 
+    <nav class="navbar">
+        <ul class="nav-links">                
+            <li><a href="abby_tracy_csssubject.html" class="active">Gallery/history</a></li>
+            <li><a href="Genre A.html">Genre Analysis A</a></li>
+            <li><a href="Genre B.html">Genre Analysis B</a></li>
+            <li><a href="asthetics.html">horror film aesthetics</a></li>
+        </ul>
+    </nav> 
+
+    <style>
+ 
+        .navbar {
+            background-color: rgba(26, 26, 29, 0.9); 
+            border-bottom: 2px solid #1f2833;      
+            position: sticky;                         
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;                  
+            padding: 15px 0;
+            backdrop-filter: blur(5px);            
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;                        
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li:not(:last-child)::after {
+            content: "|";
+            color: #4e4e50;                    
+            margin: 0 20px;
+            font-size: 14px;
+            pointer-events: none;                 
+        }
+
+        .nav-links a {
+            color: #c5c6c7;                      
+            text-decoration: none;                  
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 2px;              
+            transition: color 0.3s ease;             
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #ff0033;                         
+        }
+
+       
+        img {
+            width: 250px;
+            height: 320px;
+        }
+
+        .col {
+            width: 25%;
+            float: left;
+            text-align: center;
+        }
+
+        .img2 {
+            width: 500px;
+            height: 400px;
+        }
+
+        .col2 {
+            width: 50%;
+            float: left;
+            text-align: center;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b0c10; 
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .cards-wrap {
+            position: relative;
+            z-index: 1;
+            padding: 40px 20px;
+            overflow: hidden;
+        }
+
+        .cards-wrap::before {
+            content: "";
+            position: absolute;
+            inset: 0; 
+            background-image: url('https://www.shutterstock.com/image-illustration/blood-texture-background-bloody-red-260nw-2535516809.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 1;
+            z-index: -1;    
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <hr>
+    <br>
+    <br>
+    <center><b><h1>☠️Welcome to Our Horror Movie Website☠️</h1></b></center><br>
+    <br>
+    <hr>
+    <img src='https://t4.ftcdn.net/jpg/02/27/07/51/360_F_227075134_nfVtSlGSgIWx48VSL4XYizmEo9FJXHiB.jpg' alt='this is a pic' style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;">
+    
+    <div class="row cards-wrap">
+
+        <div class='col'>
+            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi_jCAruETmJGIy-Z4uL64fsshOmn3gqKX4li_7P8t17Izmy5u' alt="Obsession">
+            <h3>Obsession (2025)</h3>
+            <p> A gripping psychological thriller that explores the terrifying and destructive consequences of an intense, obsessive infatuation triggered by a mysterious wish-granting willow.</p>
+        </div>
+
+        <div class='col'>
+            <img src='https://www.cinematerial.com/p/500x/nqtv7kie/silent-hill-revelation-british-movie-poster.jpg?v=1456588735' alt="Silent Hill">
+            <h3>Silent Hill: Revelation (2012)</h3>
+            <p> A supernatural horror film based on the survival horror video game, following a young girl who is drawn into a terrifying, ash-covered alternate reality to rescue her father.</p>
+        </div>
+
+        <div class='col'>
+            <img src='https://i.redd.it/iqajk8sfj9x01.jpg' alt="Hereditary">
+            <h3>Hereditary</h3>
+            <p> A critically acclaimed modern masterpiece that follows a grieving family as they unravel a series of disturbing, sinister secrets inherited from their secretive matriarch.</p>
+        </div>
+
+        <div class='col'>
+            <img src='https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSSbSdZTcr1fMDOMR4lKk43elGozAmPjuSC7Ro7WHLWWV4NIA5C' alt="Tomie">
+            <h3>Tomie: Unlimited (2011)</h3>
+            <p>A cult J-horror film adaptation based on Junji Ito's manga, showcasing a schoolgirl who becomes plagued by the grotesque and supernatural resurrection of her dead sister, Tomie.</p>
+        </div>
+
+    </div>
+
+    <br>
+    <p>
+    <h3>🎬 A Brief History of Horror Cinema</h3>
+    <br>
+
+    📦 1. The Silent Era & Gothic Roots (1890s–1920s)<br>
+    <br>
+
+    The roots of horror cinema trace back to the late 19th century with Georges Méliès's early illusions. However, the genre truly took shape during the 1920s through German Expressionism. Masterpieces like The Cabinet of Dr. Caligari (1920) and Nosferatu (1922) introduced highly stylized, distorted sets and heavy shadows. These techniques perfectly captured psychological dread and set the visual blueprint for all gothic horror to come.<br>
+    <br>
+    🧟 2. Universal Monsters & The Golden Age (1930s–1950s)<br>
+    <br>
+    In the 1930s, Universal Pictures revolutionized the genre by bringing gothic literature to the silver screen. Characters like Dracula (1931) and Frankenstein (1931), famously portrayed by Bela Lugosi and Boris Karloff, became cultural icons. By the 1950s, the horror landscape shifted from supernatural monsters to Sci-Fi horror and creature features, fueled by Cold War anxieties and atomic age fears, resulting in classics like The Thing from Another World.<br>
+    <br>
+    🔪 3. Psycho-Thrillers & The Slasher Boom (1960s–1980s)<br>
+    <br>
+    In 1960, Alfred Hitchcock’s Psycho shocked the world by moving the monster from crumbling castles into everyday motels. The late 1960s and 1970s brought raw, visceral terror with The Exorcist (1973) and The Texas Chain Saw Massacre (1974). This paved the way for the golden era of slasher films in the 1980s, dominated by unstoppable antagonists in franchises like Halloween, Friday the 13th, and A Nightmare on Elm Street.<br>
+    <br>
+</p>
+<section class="genre-comparison-section">
+    <h2>Horror Film Genres Comparison</h2>
+    <table border="1" style="border-collapse: collapse; width: 100%; text-align: left;">
+        <thead>
+            <tr style="background-color: #222; color: #fff;">
+                <th>Genre</th>
+                <th>Core Elements</th>
+                <th>Visual & Sound Style</th>
+                <th>Classic Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Psychological Horror</strong></td>
+                <td>Hallucinations, mental anxiety, unreliable narrators</td>
+                <td>Oppressive atmosphere, continuous tension</td>
+                <td><em>The Shining</em></td>
+            </tr>
+            <tr>
+                <td><strong>Supernatural Horror</strong></td>
+                <td>Evil spirits, ghosts, curses, demonic possession</td>
+                <td>Unknown forces, subverting rationality</td>
+                <td><em>The Conjuring</em></td>
+            </tr>
+            <tr>
+                <td><strong>Slasher Horror</strong></td>
+                <td>Masked, relentless killer, bladed weapons</td>
+                <td>POV shots, fast chasing, sudden jump scares</td>
+                <td><em>Scream</em>, <em>Friday the 13th</em></td>
+            </tr>
+            <tr>
+                <td><strong>Folk / Body Horror</strong></td>
+                <td>Pagan rituals, local curses, bodily mutation</td>
+                <td>Static wide shots, slow-frequency ambient noise</td>
+                <td><em>Midsommar</em>, <em>The Ring</em></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+</body>
+</html>
