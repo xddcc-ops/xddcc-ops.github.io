@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <title>Introduction to Horror Film Genres - Psychology and Supernatural Elements</title>
+    <link rel="stylesheet" href="style.css">
+
+        <nav class="navbar">
+        <ul class="nav-links">                
+            <li><a href="index.html">Gallery/history</a></li>
+            <li><a href="Genre A.html" class="active">Genre Analysis A</a></li>
+            <li><a href="Genre B.html">Genre Analysis B</a></li>
+            <li><a href="asthetics.html">horror film aesthetics</a></li>
+        </ul>
+    </nav> 
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b0c10; 
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        
+        .navbar {
+            background-color: rgba(26, 26, 29, 0.9); 
+            border-bottom: 2px solid #1f2833;      
+            position: sticky;                         
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;                  
+            padding: 15px 0;
+            backdrop-filter: blur(5px);            
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;                        
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li:not(:last-child)::after {
+            content: "|";
+            color: #4e4e50;                    
+            margin: 0 20px;
+            font-size: 14px;
+            pointer-events: none;                 
+        }
+
+        .nav-links a {
+            color: #c5c6c7;                      
+            text-decoration: none;                  
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .nav-links a.active {
+            color: #ff0033;
+        }
+
+     
+        .content-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+            background: rgba(11, 12, 16, 0.75);
+            padding: 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(8px);
+            border: 1px solid #1f2833;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: #ff0033;
+            margin-bottom: 10px;
+        }
+
+        .page-header .subtitle {
+            color: #c5c6c7;
+            font-size: 1.1rem;
+        }
+
+        .genre-card {
+            background: rgba(26, 26, 29, 0.8);
+            border: 1px solid #1f2833;
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 40px;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .genre-card.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .genre-info {
+            flex: 1;
+        }
+
+        .genre-info h2 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 12px;
+            border-left: 4px solid #ff0033;
+            padding-left: 15px;
+        }
+
+        .genre-info .tagline {
+            font-style: italic;
+            color: #4ee2c0;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .genre-info p {
+            color: #c5c6c7;
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .genre-info p strong {
+            color: #ffffff;
+        }
+
+        .classic-example {
+            background: rgba(11, 12, 16, 0.6);
+            padding: 12px 20px;
+            border-radius: 8px;
+            border-left: 3px solid #ff0033;
+            display: inline-block;
+        }
+
+        .classic-example span {
+            color: #4e4e50;
+            font-weight: bold;
+            margin-right: 8px;
+            font-size: 0.9rem;
+        }
+
+        .classic-example i {
+            color: #ff0033;
+            font-weight: bold;
+            font-style: normal;
+            font-size: 1.1rem;
+        }
+
+        .genre-images-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 450px;
+        }
+
+        .genre-card img {
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .genre-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .genre-img img {
+            width: 300px;
+            height: 380px;
+            object-fit: cover;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTXvS1dVbUnEsjbss6aMueBOHZys3PT5FhUDAKHAugwlLxYv7fW" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;" alt="Background Image">
+
+    <main class="content-container">
+        
+        <section class="page-header">
+            <h1>A Comprehensive Analysis of Horror Film Genres (Part A)</h1>
+            <p class="subtitle">Explore the deepest fears within the human psyche and the inexplicable supernatural forces.</p>
+        </section>
+
+        <div class="genre-card">
+            <div class="genre-info">
+                <h2>1. Psychological Horror</h2>
+                <p class="tagline">“The true fear always comes from within you.”</p>
+                <p><strong>Uses the oppressive atmosphere, hallucinations, mental anxiety and unreliable narrators </strong>to create a continuous psychological pressure, leaving the audience unable to calm down for a long time after watching the film.</p>
+                <div class="classic-example">
+                    <span>Classic Representative Work:</span> <i>The Shining</i>
+                </div>
+            </div>
+            
+            <div class="genre-images-group">
+                <img src="https://m.media-amazon.com/images/I/51g-8R5FOhL._AC_UF894,1000_QL80_.jpg" alt="The Shining Poster 1" style="width: 130px; height: 180px;">
+                <img src="https://images7.alphacoders.com/100/1005457.jpg" alt="The Shining Pic" style="width: 240px; height: 180px;">
+                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTI4UrmkAPM0CGIfin8AuV2ZCMUEX3GYIQc7neMFlTKzgfOTZf-" alt="The Shining Typography" style="width: 385px; height: 160px; object-fit: cover;">
+            </div>
+        </div>
+
+        <div class="genre-card reverse">
+            <div class="genre-info">
+                <h2>2. Supernatural Horror</h2>
+                <p class="tagline">“When gravity and modern science fail to explain everything...”</p>
+                <p>
+                    This is the most common and popular type of horror film. The core elements include <strong>evil spirits, ghosts, curses, demonic possession, and supernatural events</strong>. They often challenge human understanding of the real world, using unknown and supernatural forces to subvert the characters' rationality.
+                </p>
+                <div class="classic-example">
+                    <span>Classic Representative Work:</span> <i>The Conjuring</i>
+                </div>
+            </div>
+            <div class="genre-img">
+                <img src="https://i.ebayimg.com/images/g/BVkAAOxyBLBR-co6/s-l400.jpg" alt="The Conjuring Pic">
+            </div>
+        </div>
+
+    </main>
+
+ 
+
+</body>
+</html>

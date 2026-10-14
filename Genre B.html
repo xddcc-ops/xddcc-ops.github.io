@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> 
+    <link rel="stylesheet" href="style.css">
+    <title>Types of horror movies</title>
+    
+    
+    <nav class="navbar">
+        <ul class="nav-links">                
+            <li><a href="abby_tracy_csssubject.html">Gallery/history</a></li>
+            <li><a href="Genre A.html">Genre Analysis A</a></li>
+            <li><a href="Genre B.html" class="active">Genre Analysis B</a></li>
+            <li><a href="asthetics.html">horror film aesthetics</a></li>
+        </ul>
+    </nav> 
+
+    <style>
+               .navbar {
+            background-color: rgba(26, 26, 29, 0.9); 
+            border-bottom: 2px solid #1f2833;      
+            position: sticky;                         
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;                  
+            padding: 15px 0;
+            backdrop-filter: blur(5px);            
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;                        
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li:not(:last-child)::after {
+            content: "|";
+            color: #4e4e50;                    
+            margin: 0 20px;
+            font-size: 14px;
+            pointer-events: none;                 
+        }
+
+        .nav-links a {
+            color: #c5c6c7;                      
+            text-decoration: none;                  
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 2px;              
+            transition: color 0.3s ease;             
+        }
+
+                .nav-links a:hover,
+        .nav-links a.active {
+            color: #ff0033;                         
+        }
+
+       
+        .col2 {
+            width: 50%;
+            float: left;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .img2 {
+            width: 250px;
+            height: 320px;
+            object-fit: cover;
+        }
+
+        .cards-wrap {
+            position: relative;
+            z-index: 1;
+            padding: 40px 20px;
+            overflow: hidden;
+            color: white;
+        }
+
+        .cards-wrap::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: darkred;
+            background-image:
+                linear-gradient(
+                    rgba(80, 0, 0, 0.65),
+                    rgba(80, 0, 0, 0.65)
+                ),
+                url("https://www.shutterstock.com/image-illustration/blood-texture-background-bloody-red-260nw-2535516809.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        body {
+            background-color: #5c0000;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .col2 p {
+            color: red;
+            line-height: 1.6;
+            padding: 10px;
+        }
+
+        .content-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+            background: rgba(11, 12, 16, 0.75);
+            padding: 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(8px);
+            border: 1px solid #1f2833;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: #ff0033;
+            margin-bottom: 10px;
+        }
+
+        .page-header .subtitle {
+            color: #c5c6c7;
+            font-size: 1.1rem;
+        }
+
+        
+        .genre-card {
+            background: rgba(26, 26, 29, 0.8);
+            border: 1px solid #1f2833;
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 40px;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+
+  
+
+        .genre-card.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .genre-info {
+            flex: 1;
+        }
+
+        .genre-info h2 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 12px;
+            border-left: 4px solid #ff0033;
+            padding-left: 15px;
+        }
+
+        .genre-info .tagline {
+            font-style: italic;
+            color: #4ee2c0; 
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .genre-info p {
+            color: #c5c6c7;
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .genre-info p strong {
+            color: #ffffff;
+        }
+
+        .classic-example {
+            background: rgba(11, 12, 16, 0.6);
+            padding: 12px 20px;
+            border-radius: 8px;
+            border-left: 3px solid #ff0033;
+            display: inline-block;
+        }
+
+        .classic-example span {
+            color: #4e4e50;
+            font-weight: bold;
+            margin-right: 8px;
+            font-size: 0.9rem;
+        }
+
+        .classic-example i {
+            color: #ff0033;
+            font-weight: bold;
+            font-style: normal;
+            font-size: 1.1rem;
+        }
+
+        .genre-images-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 450px;
+        }
+
+        .genre-card img {
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .genre-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .genre-img img {
+            width: 300px;
+            height: 380px;
+            object-fit: cover;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <img src='https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTXvS1dVbUnEsjbss6aMueBOHZys3PT5FhUDAKHAugwlLxYv7fW' style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;" alt='background photo'>
+
+    <main class="content-container">
+        
+        <section class="page-header">
+            <h1>A Comprehensive Analysis of Horror Film Genres (Part B)</h1>
+            <p class="subtitle">Explore the deepest fears within the human psyche and the inexplicable supernatural forces.</p>
+        </section>
+
+        <div class="genre-card">
+            <div class="genre-info">
+                <h2>3. Slasher horror</h2>
+                <p class="tagline">“When a mysterious phone call turns a horror movie trivia game into a real-life, bloody survival nightmare...”</p>
+                <p><strong>Slasher horror is a classic horror subgenre centered on a usually masked, relentless killer armed with bladed weapons. </strong>The killer stalks and kills a group of isolated victims one after another. It often features young characters, rising body counts, suspenseful chase scenes, and the well-known “final girl” trope, where one survivor confronts the killer at the climax. Famous examples include Halloween and Scream.</p>
+                <div class="classic-example">
+                    <span>Classic Representative Work:</span> <i>Scream</i>
+                </div>
+            </div>
+            
+            <div class="genre-images-group">
+                <img src='https://static1.moviewebimages.com/wordpress/wp-content/uploads/2023/01/scream-6-official-trailer-ghostface.jpg' width="300px" alt="Scream Poster">
+            </div>
+        </div>
+
+        <div class="genre-card reverse">
+            <div class="genre-info">
+                <h2>4. Folk/body Horror</h2>
+                <p class="tagline">“When a cursed videotape and a simple phone call seal an inescapable, seven-day death sentence...”</p>
+                <p>
+                    Folk body horror mixes folk horror and body horror. It ties grotesque bodily mutation, decay or distortion to old rural legends, pagan rituals, local curses and ancient folk beliefs. <strong>The body is twisted and violated not by a simple human killer, but by old magic, cult ceremonies or forces from the land</strong>. It creates a heavy sense of primitive dread. <em>Midsommar</em> is a typical reference work.
+                </p>
+                <div class="classic-example">
+                    <span>Classic Representative Work:</span> <i>The Ring</i>
+                </div>
+            </div>
+            <div class="genre-img">
+                <img src='https://so1.360tres.com/dr/270_500_/t01cc413e440c938fff.jpg?size=488x599' alt='The Ring Poster'>
+            </div>
+        </div>
+
+    </main>
+
+   
+
+</body>
+</html>

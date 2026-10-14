@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Horror Movie Aesthetics</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b0c10; 
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+  
+        .bg-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -2;
+            opacity: 0.3;
+        }
+
+        .navbar {
+            background-color: rgba(26, 26, 29, 0.9); 
+            border-bottom: 2px solid #1f2833;      
+            position: sticky;                         
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;                  
+            padding: 15px 0;
+            backdrop-filter: blur(5px);            
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;                        
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li:not(:last-child)::after {
+            content: "|";
+            color: #4e4e50;                    
+            margin: 0 20px;
+            font-size: 14px;
+            pointer-events: none;                 
+        }
+
+        .nav-links a {
+            color: #c5c6c7;                      
+            text-decoration: none;                  
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 2px;              
+            transition: all 0.3s ease;             
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #ff0033;                         
+            text-shadow: 0 0 8px rgba(255, 0, 51, 0.8); 
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        
+        .aesthetics-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .aesthetic-card {
+            background: rgba(15, 15, 20, 0.85);
+            padding: 25px;
+            border-radius: 4px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(3px);
+            }
+
+        .card-wide {
+            flex: 0 0 100%;
+        }
+
+        .card-medium {
+            flex: 1 1 45%;
+        }
+
+        .aesthetic-card h3 {
+            color: #ff0033;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .aesthetic-card p {
+            line-height: 1.7;
+            color: #d1d5db;
+            font-size: 0.95rem;
+        }
+
+              .movie-section-title {
+            font-size: 1.8rem;
+            color: #ffffff;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .movie-entry {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 45px;
+            background: rgba(20, 20, 25, 0.7);
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .movie-entry.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .movie-poster {
+            width: 200px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 4px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+            flex-shrink: 0;
+        }
+
+        .movie-info {
+            flex: 1;
+        }
+
+        .movie-title {
+            font-size: 1.4rem;
+            color: #ff334b;
+            margin-bottom: 12px;
+        }
+
+        .movie-desc {
+            line-height: 1.6;
+            color: #cccccc;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .card-medium {
+                flex: 0 0 100%;
+            }
+            .movie-entry, .movie-entry.reverse {
+                flex-direction: column;
+                text-align: center;
+            }
+            .movie-poster {
+                width: 100%;
+                max-width: 250px;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <img src="https://t4.ftcdn.net/jpg/02/27/07/51/360_F_227075134_nfVtSlGSgIWx48VSL4XYizmEo9FJXHiB.jpg" class="bg-fixed" alt="Background Texture">
+
+
+    <nav class="navbar">
+        <ul class="nav-links">                
+            <li><a href="index.html">Gallery/history</a></li>
+            <li><a href="Genre A.html">Genre Analysis A</a></li>
+            <li><a href="Genre B.html">Genre Analysis B</a></li>
+            <li><a href="asthetics.html" class="active">horror film aesthetics</a></li>
+        </ul>
+    </nav> 
+
+    <hr>
+    <br><br>
+    <center><b><h1>Horror Movie Aesthetics</h1></b></center><br>
+    <br>
+    <hr>
+
+    <div class="container">
+
+    
+        <section class="aesthetics-grid">
+            <div class="aesthetic-card card-wide">
+                <h3>Visual Tone & Lighting</h3>
+                <p>Horror genres build tension visually through distinct color grading and lighting styles. Low-key lighting, heavy shadows, dark blue and desaturated black tones create uncertainty and a sense of being hunted. In contrast, bright oversaturated natural light and warm pastoral colors create an "uncanny valley" contrast — beautiful visuals hide brutal rituals and body distortion, making the horror more psychological and disturbing.</p>
+            </div>
+
+            <div class="aesthetic-card card-medium">
+                <h3>Camera Language & Framing</h3>
+                <p>Slasher films rely heavily on POV shots from the killer, tight narrow framing, and fast chasing handheld shots to create immediate panic. Folk body horror uses static wide shots, symmetrical rigid framing, and slow close-ups, reflecting the oppression of ancient folk rules and cursed fate.</p>
+            </div>
+
+            <div class="aesthetic-card card-medium">
+                <h3>Visual Symbol & Setting Design</h3>
+                <p>Horror movies mainly use empty houses, dark corridors, and abandoned camps. Its key symbols include sharp weapons and masked figures, representing random, human-made violence and relentless pursuit.</p>
+            </div>
+
+            <div class="aesthetic-card card-wide">
+                <h3>Sound Aesthetics</h3>
+                <p>Horror uses sharp, sudden sound effects, loud jump scares, and fast-paced background music for explosive shock. Alternatively, slow-frequency ambient noise, dull chanting, quiet silence, and eerie folk melodies create continuous, slow-burning psychological unease.</p>
+            </div>
+        </section>
+
+
+        <h2 class="movie-section-title">Aesthetic Case Studies</h2>
+
+        <div class="movie-entry">
+            <img src="https://wallpapercave.com/wp/wp1893021.jpg" class="movie-poster" alt="Friday the 13th">
+            <div class="movie-info">
+                <h3 class="movie-title">📦 1. Friday the 13th (1980)</h3>
+                <p class="movie-desc">This slasher film creates horror through a hidden serial killer and constant chase tension. Set in an isolated summer camp, the killer hunts young victims one by one. Dark woods and lonely cabins build a dangerous atmosphere of sudden violent attacks.</p>
+            </div>
+        </div>
+
+        <div class="movie-entry reverse">
+            <img src="https://th.bing.com/th/id/OIP.fvCgsL5obKaRjJ4KBs1E9QHaK-?w=132&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" class="movie-poster" alt="The Others">
+            <div class="movie-info">
+                <h3 class="movie-title">🧟 2. The Others (2001)</h3>
+                <p class="movie-desc">It does not rely on bloody scenes. The fear comes from confusion between reality and illusion. A woman and her children live in a gloomy mansion. Strange events make both the characters and audience doubt what is real.</p>
+            </div>
+        </div>
+
+        <div class="movie-entry">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.uFX9CErYrKVEf6O927CAWgHaFe?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" class="movie-poster" alt="Midsommar">
+            <div class="movie-info">
+                <h3 class="movie-title">🔪 3. Midsommar (2019)</h3>
+                <p class="movie-desc">Folk horror connects terror with ancient pagan rituals and nature. The story takes place in a bright Swedish village. Happy daylight and traditional ceremonies hide cruel sacrifices. The old local beliefs slowly swallow outsiders.</p>
+            </div>
+        </div>
+
+        <div class="movie-entry reverse">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.buVoFd3kc30dUCnoFNOLLQHaK4?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" class="movie-poster" alt="Braindead">
+            <div class="movie-info">
+                <h3 class="movie-title">🧠 4. Braindead (1992)</h3>
+                <p class="movie-desc">Body horror focuses on the deformation and breakdown of human bodies. A strange virus makes people’s bodies rot and mutate. Gross visual effects show the loss of control over our own flesh, triggering instinctive discomfort.</p>
+            </div>
+        </div>
+
+    </div>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/47Xw21zkKVfm8mQtftilLT?utm_source=generator&si=9c6ae6c95c114229" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <section class="contact-form-section">
+    <h2>Join Our Horror Community</h2>
+    <p>Tell us about your favorite horror movies and get updates on new movie reviews!</p>
+    
+    <form action="#" method="POST">
+
+        <div style="margin-bottom: 15px;">
+            <label for="username">Your Name:</label><br>
+            <input type="text" id="username" name="username" required placeholder="Enter your name">
+        </div>
+        
+    
+        <div style="margin-bottom: 15px;">
+            <label for="useremail">Email Address:</label><br>
+            <input type="email" id="useremail" name="useremail" required placeholder="Enter your email">
+        </div>
+     
+        <div style="margin-bottom: 15px;">
+            <label>What is your favorite horror genre?</label><br>
+            <input type="radio" id="psychological" name="fav_genre" value="Psychological">
+            <label for="psychological">Psychological Horror</label><br>
+            
+            <input type="radio" id="supernatural" name="fav_genre" value="Supernatural">
+            <label for="supernatural">Supernatural Horror</label><br>
+            
+            <input type="radio" id="slasher" name="fav_genre" value="Slasher">
+            <label for="slasher">Slasher Horror</label><br>
+            
+            <input type="radio" id="bodyhorror" name="fav_genre" value="Folk/Body">
+            <label for="bodyhorror">Folk / Body Horror</label>
+        </div>
+        
+   
+        <div style="margin-bottom: 15px;">
+            <label for="message">Leave a message or movie recommendation:</label><br>
+            <textarea id="message" name="message" rows="4" cols="30" placeholder="Type here..."></textarea>
+        </div>
+        
+      
+        <div>
+            <button type="submit" style="cursor: pointer;">Submit</button>
+        </div>
+    </form>
+</section>
+
+</body>
+</html>
