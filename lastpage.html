@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Question time</title>
+
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial;
+            text-align: center;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 全站统一导航栏样式 */
+        nav {
+            background-color: #16213e;
+            padding: 15px;
+            border-bottom: 2px solid #0f3460;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: rgb(28, 212, 151);
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+
+        /* 测验卡片容器样式 */
+        .quiz-box {
+            width: 75%;
+            margin: 30px auto;
+            padding: 20px;
+            border: 2px solid #d6b45c;
+            border-radius: 20px;
+        }
+
+        h1 {
+            color: #bd8625;
+        }
+
+        h2 {
+            color: #987022;
+        }
+
+        .question {
+            margin: 15px;
+            text-align: left;
+            font-size: 16px;
+            color: #333333;
+            font-weight: normal;
+        }
+
+        button {
+            background-color: #e8bd63;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #c99b3c;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f5d991;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- 全站统一导航栏 -->
+    <nav>
+        <a href='index.html'><img src='https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/23/viral-tiktok-hamster-meme-1024x576.jpg?width=3840&quality=75&format=auto' class='logo' alt='the logo'></a>
+        <a href='index.html'>Home</a> |
+        <a href='game1.html'>Game 1</a> |
+        <a href='game2.html'>Game 2</a> |
+        <a href='lastpage.html'>Quiz & Survey</a>
+    </nav>
+
+    <div class="quiz-box">
+
+        <h1>Question time</h1>
+
+        <h2>Answer the questions and see your score</h2>
+
+        <form id="quizForm">
+
+            <div class="question">
+                <p>1. How often do you play video games?</p>
+                <input type="radio" name="q1" id="q1a"> Every day<br>
+                <input type="radio" name="q1" id="q1b"> Sometimes<br>
+                <input type="radio" name="q1" id="q1c"> Rarely
+            </div>
+
+            <div class="question">
+                <p>2. How did you feel about the first game?</p>
+                <input type="radio" name="q2" id="q2a"> It was fun<br>
+                <input type="radio" name="q2" id="q2b"> It was okay<br>
+                <input type="radio" name="q2" id="q2c"> It was difficult
+            </div>
+
+            <div class="question">
+                <p>3. How did you feel about the second game?</p>
+                <input type="radio" name="q3" id="q3a"> It was fun<br>
+                <input type="radio" name="q3" id="q3b"> It was okay<br>
+                <input type="radio" name="q3" id="q3c"> It was difficult
+            </div>
+
+            <div class="question">
+                <p>4. How many players from one basketball team are on the court at the same time?</p>
+                <input type="radio" name="q4" id="q4a"> 4<br>
+                <input type="radio" name="q4" id="q4b"> 5<br>
+                <input type="radio" name="q4" id="q4c"> 11
+            </div>
+
+            <div class="question">
+                <p>5. Which NBA team has won the most championships?</p>
+                <input type="radio" name="q5" id="q5a"> Los Angeles Lakers<br>
+                <input type="radio" name="q5" id="q5b"> Boston Celtics<br>
+                <input type="radio" name="q5" id="q5c"> Chicago Bulls
+            </div>
+
+            <div class="question">
+                <p>6. What type of game do you enjoy the most?</p>
+                <select id="q6">
+                    <option value="">Choose an answer</option>
+                    <option value="Sports">Sports games</option>
+                    <option value="Action">Action games</option>
+                    <option value="Racing">Racing games</option>
+                    <option value="Strategy">Strategy games</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <p>7. What is your favorite video game?</p>
+                <input type="text" id="q7" placeholder="Enter a game name">
+            </div>
+
+            <div class="question">
+                <p>8. Which of these are basic basketball skills? (Select all that apply)</p>
+                <input type="checkbox" id="q8a"> Dribbling<br>
+                <input type="checkbox" id="q8b"> Passing<br>
+                <input type="checkbox" id="q8c"> Shooting<br>
+                <input type="checkbox" id="q8d"> Wearing a helmet
+            </div>
+
+        </form>
+
+        <button type="button" onclick="checkAnswers()">Submit Answers</button>
+        <button type="button" onclick="resetQuiz()">Restart Quiz</button>
+
+        <h2 id="result"></h2>
+
+    </div>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+
+            // Question 1
+            if (document.getElementById('q1a').checked ||
+                document.getElementById('q1b').checked ||
+                document.getElementById('q1c').checked) {
+                score++;
+            }
+
+            // Question 2
+            if (document.getElementById('q2a').checked ||
+                document.getElementById('q2b').checked ||
+                document.getElementById('q2c').checked) {
+                score++;
+            }
+
+            // Question 3
+            if (document.getElementById('q3a').checked ||
+                document.getElementById('q3b').checked ||
+                document.getElementById('q3c').checked) {
+                score++;
+            }
+
+            // Question 4
+            if (document.getElementById('q4b').checked) {
+                score++;
+            }
+
+            // Question 5
+            if (document.getElementById('q5b').checked) {
+                score++;
+            }
+
+            // Question 6
+            if (document.getElementById('q6').value != "") {
+                score++;
+            }
+
+            // Question 7
+            if (document.getElementById('q7').value != "") {
+                score++;
+            }
+
+            // Question 8
+            if (document.getElementById('q8a').checked &&
+                document.getElementById('q8b').checked &&
+                document.getElementById('q8c').checked &&
+                !document.getElementById('q8d').checked) {
+                score++;
+            }
+
+            document.getElementById('result').innerHTML =
+                '🏆 Your Score: ' + score + ' / 8';
+
+            if (score <= 3) {
+                document.getElementById('result').innerHTML +=
+                    '<br>Thanks for sharing your answers!';
+            } else if (score <= 6) {
+                document.getElementById('result').innerHTML +=
+                    '<br>Good job Thanks for your patience';
+            } else {
+                document.getElementById('result').innerHTML +=
+                    '<br>Excellent! You did great';
+            }
+        }
+
+        function resetQuiz() {
+            document.getElementById('quizForm').reset();
+            document.getElementById('result').innerHTML = '';
+        }
+    </script>
+
+</body>
+
+</html>

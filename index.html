@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cyber Arcade - Home</title>
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: #1a1a2e; 
+        }
+
+        .bg-img {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.4); 
+        }
+
+  
+        nav {
+            background-color: rgba(22, 33, 62, 0.9);
+            padding: 15px;
+            text-align: center;
+            border-bottom: 2px solid #0f3460;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: rgb(28, 212, 151);
+            font-weight: bold;
+            margin: 0 10px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        .logo{
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        /* 内容容器 */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: rgba(22, 33, 62, 0.85);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            text-align: center;
+        }
+
+        
+        .game-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(15, 52, 96, 0.6);
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .game-section img {
+            width: 150px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 2px solid rgb(28, 212, 151);
+            margin-right: 20px;
+        }
+
+        .game-info {
+            flex-grow: 1;
+        }
+
+        .game-info h3 {
+            margin-top: 0;
+            color: rgb(28, 212, 151);
+        }
+    </style>
+</head>
+<body>
+
+    <img src='pic1' class='bg-img' alt='background photo'>
+
+    
+    <nav>
+        <a href='index.html'><img src='https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/23/viral-tiktok-hamster-meme-1024x576.jpg?width=3840&quality=75&format=auto' class='logo' alt='the logo'></a>
+        <a href='index.html'>Home</a> |
+        <a href='game1.html'>Game 1</a> |
+        <a href='game2.html'>Game 2</a> |
+        <a href='lastpage.html'>Quiz & Survey</a>
+    </nav>
+
+
+    <div class="container">
+        <h1 align="center"><i><font color="rgb(28,212,151)">Welcome to the Cyber Arcade</font></i></h1>
+        <p style="font-size: 18px; color: #ccc;">Step into our digital playground! Test your reflexes in Game 1 or try your luck with the treasure chests in Game 2.</p>
+
+        <hr style="border-color: #0f3460; margin: 30px 0;">
+
+        
+        <div class="game-section">
+            <img src='https://cdn.pixabay.com/animation/2023/05/17/16/04/16-04-26-783_512.gif' alt='Game 1 preview'>
+            <div class="game-info">
+                <h3>Game 1: Cyber Catcher </h3>
+                <p><strong>How to play:</strong> Test your reaction speed! Move your mouse and click the flying target as fast as you can whenever it teleports. Earn 1 to 20 points to win the challenge!</p>
+                <a href="game1.html" style="color: rgb(28,212,151); font-weight: bold; text-decoration: none;">Play Game 1 &rarr;</a>
+            </div>
+        </div>
+
+        
+        <div class="game-section">
+            <img src='https://i.pinimg.com/originals/53/b4/42/53b442624fbeb805ed8a4c3409bd4b77.jpg' alt='Game 2 preview'>
+            <div class="game-info">
+                <h3>Game 2: Treasure Chest Quest </h3>
+                <p><strong>How to play:</strong> There are 3 treasure chests, but only one hides the treasure! Pick one chest each round to test your luck. There are 5 rounds in total—find as much treasure as you can to score 10 points per win!</p>
+                <a href="game2.html" style="color: rgb(28,212,151); font-weight: bold; text-decoration: none;">Play Game 2 &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
