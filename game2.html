@@ -1,0 +1,297 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Treasure Hunter</title>
+
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial;
+            text-align: center;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 全站统一导航栏样式 */
+        nav {
+            background-color: #16213e;
+            padding: 15px;
+            border-bottom: 2px solid #0f3460;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: rgb(28, 212, 151);
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+
+        .game-box {
+            width: 75%;
+            margin: 30px auto;
+            padding: 20px;
+            border: 2px solid #d6b45c;
+            border-radius: 15px;
+        }
+
+        h1 {
+            color: #bd8625;
+        }
+
+        h2 {
+            color: #987022;
+        }
+
+        button {
+            background-color: #e8bd63;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #c99b3c;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f5d991;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- 全站统一导航栏 -->
+    <nav>
+        <a href='index.html'><img src='https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/23/viral-tiktok-hamster-meme-1024x576.jpg?width=3840&quality=75&format=auto' class='logo' alt='the logo'></a>
+        <a href='index.html'>Home</a> |
+        <a href='game1.html'>Game 1</a> |
+        <a href='game2.html'>Game 2</a> |
+        <a href='lastpage.html'>Quiz & Survey</a>
+    </nav>
+
+    <div class="game-box">
+
+        <h1>💎 TREASURE HUNTER 💎</h1>
+
+        <h2>Find the Hidden Treasure</h2>
+
+        <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzOnntB_xPcQBG5VvFxQ2z36T8aA_FGT0oTb8IjPTz_g&s=10"
+            width="200"
+            alt="Treasure Chest"
+        >
+
+        <p>Choose one of the three treasure chests.</p>
+        <p>Find the treasure and earn 10 points</p>
+
+        <h2 id="round">Round: 1 / 5</h2>
+
+        <h2 id="score">Score: 0</h2>
+
+        <button onclick="choose(0)" id="chest0">
+            📦 Chest 1
+        </button>
+
+        <button onclick="choose(1)" id="chest1">
+            📦 Chest 2
+        </button>
+
+        <button onclick="choose(2)" id="chest2">
+            📦 Chest 3
+        </button>
+
+        <h2 id="result">Choose a chest!</h2>
+
+        <img
+            id="resultImage"
+            src=""
+            width="180"
+            alt="Game Result"
+            style="display:none"
+        >
+
+        <br><br>
+
+        <button onclick="nextRound()" id="next" style="display:none">
+            ➡️ Next Round
+        </button>
+
+        <button onclick="reset()">
+            🔄 Restart Game
+        </button>
+
+        <h2 id="final"></h2>
+
+    </div>
+
+    <script>
+
+        let score = 0;
+        let round = 1;
+        let treasure = Math.floor(Math.random() * 3);
+        let round_done = false;
+        let game_on = true;
+
+        function choose(a) {
+
+            if (game_on && !round_done) {
+
+                round_done = true;
+
+                if (a == treasure) {
+
+                    score += 10;
+
+                    document.getElementById('result').innerHTML =
+                    '🎉 You found the treasure! +10 points!';
+
+                    document.getElementById('resultImage').src =
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGOdWKkqQ3xRov0UGWOj11Oh3Lpkc-VkE1DPrjo3xemg&s=10';
+
+                }
+                else {
+
+                    document.getElementById('result').innerHTML =
+                    '❌ Wrong! The treasure was in Chest ' + (treasure + 1);
+
+                    document.getElementById('resultImage').src =
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyGU9zBERgnVnvyWqB6cfYT8jMvcUdqsNaBtZ8oZrsmQ&s=10';
+
+                }
+
+                document.getElementById('resultImage').style.display =
+                'inline';
+
+                document.getElementById('score').innerHTML =
+                'Score: ' + score;
+
+                document.getElementById('chest0').innerHTML =
+                '❌ Empty!';
+
+                document.getElementById('chest1').innerHTML =
+                '❌ Empty!';
+
+                document.getElementById('chest2').innerHTML =
+                '❌ Empty!';
+
+                document.getElementById('chest' + treasure).innerHTML =
+                '💰 Treasure!';
+
+                if (round == 5) {
+
+                    game_on = false;
+
+                    document.getElementById('final').innerHTML =
+                    '🏆 Game Over Final Score: ' + score + ' / 50';
+
+                }
+                else {
+
+                    document.getElementById('next').style.display =
+                    'inline';
+
+                }
+
+            }
+
+        }
+
+        function nextRound() {
+
+            if (game_on && round_done) {
+
+                round++;
+
+                round_done = false;
+
+                treasure = Math.floor(Math.random() * 3);
+
+                document.getElementById('round').innerHTML =
+                'Round: ' + round + ' / 5';
+
+                document.getElementById('result').innerHTML =
+                'Choose a chest!';
+
+                document.getElementById('chest0').innerHTML =
+                '📦 Chest 1';
+
+                document.getElementById('chest1').innerHTML =
+                '📦 Chest 2';
+
+                document.getElementById('chest2').innerHTML =
+                '📦 Chest 3';
+
+                document.getElementById('resultImage').style.display =
+                'none';
+
+                document.getElementById('next').style.display =
+                'none';
+
+            }
+
+        }
+
+        function reset() {
+
+            score = 0;
+            round = 1;
+
+            treasure = Math.floor(Math.random() * 3);
+
+            round_done = false;
+            game_on = true;
+
+            document.getElementById('score').innerHTML =
+            'Score: 0';
+
+            document.getElementById('round').innerHTML =
+            'Round: 1 / 5';
+
+            document.getElementById('result').innerHTML =
+            'Choose a chest!';
+
+            document.getElementById('chest0').innerHTML =
+            '📦 Chest 1';
+
+            document.getElementById('chest1').innerHTML =
+            '📦 Chest 2';
+
+            document.getElementById('chest2').innerHTML =
+            '📦 Chest 3';
+
+            document.getElementById('resultImage').style.display =
+            'none';
+
+            document.getElementById('next').style.display =
+            'none';
+
+            document.getElementById('final').innerHTML =
+            '';
+
+        }
+
+    </script>
+
+</body>
+
+</html>
