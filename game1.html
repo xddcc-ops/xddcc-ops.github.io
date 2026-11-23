@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Catcher - Game 1</title>
+    <style>
+       
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a2e;
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        
+        nav {
+            background-color: #16213e;
+            padding: 15px;
+            border-bottom: 2px solid #0f3460;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: rgb(28,212,151);
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        
+        .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+
+        
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        
+        #point {
+            color: rgb(28,212,151);
+            margin-bottom: 10px;
+            font-size: 24px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        div.play-area {
+            height: 600px;
+            width: 600px;
+            background-color: #16213e; 
+            border: 3px solid rgb(28,212,151);
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+        }
+
+        
+        #button {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        #button img {
+            width: 120px;
+            height: 120px;
+            pointer-events: none; 
+            transition: transform 0.1s;
+        }
+
+        #button img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+  
+    <nav>
+        <a href='index.html'><img src='https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/23/viral-tiktok-hamster-meme-1024x576.jpg?width=3840&quality=75&format=auto' class='logo' alt='the logo'></a>
+        <a href='index.html'>Home</a> |
+        <a href='game1.html'>Game 1</a> |
+        <a href='game2.html'>Game 2</a> |
+        <a href='lastpage.html'>Quiz & Survey</a>
+    </nav>
+
+    
+    <div class="game-container">
+        <h1>Catch the Target!</h1>
+        <h2 id='point'>YOU HAVE SCORED 0 POINTS !</h2>
+
+      
+        <div class="play-area">
+            <button onmouseover='random()' id='button' onclick='goal()'>
+                <img src='https://cdn.pixabay.com/animation/2023/05/17/16/04/16-04-26-783_512.gif' alt='target'>
+            </button>
+        </div>
+    </div>
+
+   
+    <script>
+        let s = 0;
+        function random(){
+            let p = Math.random() * 450; 
+            document.getElementById('button').style.top = p + 'px';
+            document.getElementById('button').style.left = p + 'px';
+        }
+        function goal(){
+            s += 1;
+            document.getElementById('point').innerHTML = 'YOU HAVE SCORED ' + s + ' POINTS !';
+            let q = Math.random() * 450;
+            document.getElementById('button').style.top = q + 'px';
+            document.getElementById('button').style.left = q + 'px';
+        }
+    </script>
+</body>
+</html>
